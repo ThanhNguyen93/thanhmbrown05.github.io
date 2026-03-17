@@ -290,6 +290,121 @@
       .nb-topbar { padding: 1.2rem 1.5rem; }
     }
   </style>
+
+  <style>
+    /* ── JP CSS VARIABLE BRIDGE ── */
+    :root {
+      --jp-cell-editor-background:        #F9F7F4;
+      --jp-cell-editor-active-background: #F1EDE8;
+      --jp-cell-editor-border-color:      #E5E0DA;
+      --jp-mirror-editor-variable-color:  #1C1916;
+      --jp-mirror-editor-comment-color:   #6B8C6E;
+      --jp-mirror-editor-keyword-color:   #1C3A5E;
+      --jp-mirror-editor-operator-color:  #0C7C6E;
+      --jp-mirror-editor-punctuation-color: #6B6560;
+      --jp-mirror-editor-number-color:    #C4513A;
+      --jp-mirror-editor-string-color:    #7C4A2E;
+      --jp-mirror-editor-error-color:     #C4513A;
+      --jp-mirror-editor-builtin-color:   #0C7C6E;
+      --jp-mirror-editor-def-color:       #1C3A5E;
+      --jp-mirror-editor-meta-color:      #6B6560;
+      --jp-scrollbar-thumb-color:         180,180,180;
+      --jp-scrollbar-background-color:    #F8F6F2;
+      --jp-content-font-size1:            14px;
+      --jp-code-font-size:                13px;
+      --jp-border-color0:                 #E5E0DA;
+      --jp-border-color1:                 #E5E0DA;
+      --jp-border-color2:                 #D0C9C2;
+      --jp-border-color3:                 #D0C9C2;
+      --jp-layout-color0:                 #FFFFFF;
+      --jp-layout-color1:                 #F8F6F2;
+      --jp-layout-color2:                 #F1EDE8;
+      --jp-layout-color3:                 #E5E0DA;
+      --jp-content-font-color0:           #1C1916;
+      --jp-content-font-color1:           #1C1916;
+      --jp-content-font-color2:           #6B6560;
+      --jp-content-font-color3:           #A8A3A0;
+      --jp-brand-color0:                  #0A6B5E;
+      --jp-brand-color1:                  #0C7C6E;
+      --jp-brand-color2:                  #B4DDD9;
+      --jp-brand-color3:                  #E4F3F0;
+      --jp-cell-prompt-width:             64px;
+      --jp-cell-collapser-width:          8px;
+      --jp-code-padding:                  0.5rem;
+    }
+
+    /* ── CELL RENDERING FIXES ── */
+    .jp-InputPrompt, .jp-OutputPrompt { 
+      color: var(--dim) !important;
+      font-family: 'DM Mono', monospace !important;
+      font-size: 0.7rem !important;
+      opacity: 0.5;
+    }
+    .jp-Collapser { display: none !important; }
+    .jp-CodeMirrorEditor, .cm-editor { background: transparent !important; }
+    .highlight { background: transparent !important; }
+    .highlight pre {
+      font-family: 'DM Mono', monospace !important;
+      font-size: 0.78rem !important;
+      line-height: 1.65 !important;
+      color: var(--navy) !important;
+    }
+    .jp-RenderedHTMLCommon {
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 0.93rem !important;
+      color: var(--muted) !important;
+      line-height: 1.8 !important;
+    }
+    .jp-RenderedHTMLCommon strong { color: var(--text) !important; font-weight: 500 !important; }
+    .jp-RenderedHTMLCommon code {
+      font-family: 'DM Mono', monospace !important;
+      font-size: 0.78em !important;
+      background: var(--off2) !important;
+      color: var(--navy) !important;
+      padding: 0.1em 0.35em !important;
+      border-radius: 3px !important;
+    }
+    .jp-RenderedHTMLCommon blockquote {
+      border-left: 3px solid var(--teal-md) !important;
+      padding-left: 1rem !important;
+      margin-left: 0 !important;
+      color: var(--muted) !important;
+      background: var(--teal-lt) !important;
+      border-radius: 0 6px 6px 0 !important;
+      padding: 0.6rem 1rem !important;
+    }
+    .jp-RenderedText pre {
+      font-family: 'DM Mono', monospace !important;
+      font-size: 0.74rem !important;
+      color: var(--muted) !important;
+      line-height: 1.6 !important;
+      white-space: pre-wrap !important;
+      background: var(--off) !important;
+      padding: 0.7rem 1rem !important;
+      border-radius: 6px !important;
+      border-left: 3px solid var(--border2) !important;
+    }
+    .jp-OutputArea-output img {
+      max-width: 100% !important;
+      border-radius: 8px !important;
+      border: 1px solid var(--border) !important;
+      display: block !important;
+    }
+    .jp-RenderedHTMLCommon table {
+      border-collapse: collapse !important;
+      font-size: 0.8rem !important;
+    }
+    .jp-RenderedHTMLCommon th {
+      background: var(--off2) !important;
+      padding: 0.4rem 0.8rem !important;
+      border-bottom: 2px solid var(--border2) !important;
+      font-weight: 500 !important;
+    }
+    .jp-RenderedHTMLCommon td {
+      padding: 0.35rem 0.8rem !important;
+      border-bottom: 1px solid var(--border) !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -302,7 +417,7 @@
     <p class="profile-tagline">Data Scientist · Bioinformatics · ML · Health Data</p>
     <div class="profile-pill" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--teal-lt);border:1px solid var(--teal-md);color:var(--teal);font-family:DM Mono,monospace;font-size:0.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .65rem;border-radius:100px;margin-bottom:1.4rem;">
       <span style="width:5px;height:5px;background:var(--teal);border-radius:50%;"></span>
-      Open to roles
+      Open to Data Science roles
     </div>
     <div style="height:1px;background:var(--border);margin:0 0 1rem;"></div>
     <ul class="sidebar-nav">
@@ -316,7 +431,7 @@
     <div class="sidebar-socials">
       <a href="https://github.com/ThanhNguyen93" target="_blank" class="social-btn">gh ↗</a>
       <a href="https://www.linkedin.com/in/thanhnguyen5493/" target="_blank" class="social-btn">in ↗</a>
-      <a href="mailto:thanh.brown05@gmail.com" class="social-btn">✉</a>
+      <a href="/cdn-cgi/l/email-protection#c1b5a9a0afa9efa3b3aeb6aff1f481a6aca0a8adefa2aeac" class="social-btn">✉</a>
     </div>
   </aside>
 
@@ -1815,7 +1930,7 @@ insurance and higher treatment utilization among middle-income individuals.</p>
 
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── AUTO-BUILD TOC FROM HEADINGS ──
 (function() {
   const content = document.querySelector('.nb-content');
@@ -1880,11 +1995,4 @@ insurance and higher treatment utilization among middle-income individuals.</p>
     });
   }, { threshold: 0.2, rootMargin: '-10% 0px -60% 0px' });
 
-  filtered.forEach(h => observer.observe(h));
-  window.addEventListener('scroll', updateProgress, { passive: true });
-  updateProgress();
-})();
-</script>
-
-</body>
-</html>
+  filtered.forEa
