@@ -138,34 +138,32 @@
 
       <div class="projects-list reveal">
 
-    <!-- 01 — Hiring Intelligence -->
-    <div class="project-card featured" id="project-1">
-      <div>
-        <p class="project-num">01 — ML App · Streamlit · Scikit-learn <span class="new-badge">New</span></p>
-        <h3 class="project-title">Hiring Intelligence — Recruitment Outcome Predictor</h3>
-        <p class="project-desc">End-to-end <strong>ML web app </strong>predicting candidate hiring outcomes using a tuned Gradient Boosting classifier — 94.7% precision, 93.3% ROC-AUC on 1,500 recruitment records. The web app features an <strong>EDA explorer</strong> and <strong>live candidate predictor</strong> with probability gauge and radar chart. 
-          Key finding: recruitment strategy (SHAP = 3.052) dominates all candidate-level signals — stronger than interview score, skill score, or education combined. A useful reminder that process design shapes outcomes as much as candidate quality does.
-        </p>
-        <div class="project-tags">
-          <span class="tag tag-teal">Machine Learning</span>
-          <span class="tag tag-navy">SHAP</span>
-          <span class="tag tag-muted">Streamlit</span>
-          <span class="tag tag-muted">Plotly</span>
-          <span class="tag tag-muted">scikit-learn</span>
-          <span class="tag tag-muted">Python</span>
+           <!-- 01 — ISCVAM -->
+        <div class="project-card" id="project-1">
+          <div>
+            <p class="project-num">01 — Data Pipeline Engineering - Clinical Analytics Platform</p>
+            <h3 class="project-title">ISCVAM — Multi-Study Oncology Data Pipelines <span class="new-badge"> Cancer Research</span></h3>
+            <p class="project-desc">
+              Experimental scientists had no direct computational path to their own data, leaving finished experiments stuck in an analyst queue. I built the automated data layer that removed the delay: two containerized R pipelines handling end-to-end ingestion, quality control, and cell-type annotation across 198 studies (~6.3M cells). Orchestrated on Slurm job arrays with size-aware scheduling and per-step checkpointing, the pipelines convert raw sequencing output into standardized HDF5 datasets the platform reads directly. Platform accepted for presentation at AACR 2023.
+              <div class="project-tags">
+              <span class="tag tag-coral">R</span>
+              <span class="tag tag-coral">Pipeline design</span>
+              <span class="tag tag-navy">HPC-slurm</span>
+              <span class="tag tag-muted">Checkpointing</span>
+              <span class="tag tag-muted">Research</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="projects/project-iscvam.html" class="link-btn primary">View Project →</a>
+            <a href="https://github.com/AnnChenLab/ISCVAM" target="_blank" class="link-btn">GitHub ↗</a>
+            <div class="project-preview">
+              <img src="assets/img/iscvam-screenshot.png" alt="ISCVAM screenshot">
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="project-links">
-        <a href="https://hiring-intelligence-h37uceeoda-ue.a.run.app" target="_blank" class="link-btn primary">Live App →</a>
-        <a href="https://github.com/ThanhNguyen93/Hiring_Intelligence" target="_blank" class="link-btn">GitHub ↗</a>
-        <div class="project-preview">
-          <img src="assets/img/hiring-intelligence-screenshot.png" alt="Hiring Intelligence app screenshot">
-        </div>
-      </div>
-    </div>
 
-        
-        <!-- 02 — Osteoporosis -->
+
+         <!-- 02 — Osteoporosis -->
         <div class="project-card" id="project-2">
           <div>
             <p class="project-num">02 — Clinical ML · Python · Scikit-learn</p>
@@ -189,11 +187,40 @@
         </div>
 
 
+    <!-- 03 — Hiring Intelligence -->
+    <div class="project-card featured" id="project-3">
+      <div>
+        <p class="project-num">03 — ML App · Streamlit · Scikit-learn</p>
+        <h3 class="project-title">Hiring Intelligence — Recruitment Outcome Predictor</h3>
+        <p class="project-desc">End-to-end <strong>ML web app </strong>predicting candidate hiring outcomes using a tuned Gradient Boosting classifier — 94.7% precision, 93.3% ROC-AUC on 1,500 recruitment records. The web app features an <strong>EDA explorer</strong> and <strong>live candidate predictor</strong> with probability gauge and radar chart. 
+          Key finding: recruitment strategy (SHAP = 3.052) dominates all candidate-level signals — stronger than interview score, skill score, or education combined. A useful reminder that process design shapes outcomes as much as candidate quality does.
+        </p>
+        <div class="project-tags">
+          <span class="tag tag-teal">Machine Learning</span>
+          <span class="tag tag-navy">SHAP</span>
+          <span class="tag tag-muted">Streamlit</span>
+          <span class="tag tag-muted">Plotly</span>
+          <span class="tag tag-muted">scikit-learn</span>
+          <span class="tag tag-muted">Python</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://hiring-intelligence-h37uceeoda-ue.a.run.app" target="_blank" class="link-btn primary">Live App →</a>
+        <a href="https://github.com/ThanhNguyen93/Hiring_Intelligence" target="_blank" class="link-btn">GitHub ↗</a>
+        <div class="project-preview">
+          <img src="assets/img/hiring-intelligence-screenshot.png" alt="Hiring Intelligence app screenshot">
+        </div>
+      </div>
+    </div>
 
-        <!-- 03 — MAUDE RShiny -->
-        <div class="project-card" id="project-3">
+        
+       
+
+
+        <!-- 04 — MAUDE RShiny -->
+        <div class="project-card" id="project-4">
           <div>
-            <p class="project-num">03 — FDA Data · R · Interactive App</p>
+            <p class="project-num">04 — FDA Data · R · Interactive App</p>
             <h3 class="project-title">FDA Medical Device Harm Trends — RShiny Dashboard</h3>
             <p class="project-desc">Built an interactive visualization app over the 2016 MAUDE (FDA medical device passive surveillance) dataset. Users explore temporal harm trends across device categories and manufacturers. Demonstrates stakeholder-facing data product design.</p>
             <div class="project-tags">
@@ -213,28 +240,7 @@
           </div>
         </div>
 
-        <!-- 04 — ISCVAM -->
-        <div class="project-card" id="project-4">
-          <div>
-            <p class="project-num">04 — Bioinformatics Research · Docker Deployment</p>
-            <h3 class="project-title">ISCVAM — Interactive Visual Analytics for Single-Cell Multiomics <span class="new-badge">Research</span></h3>
-            <p class="project-desc">An interactive visual analytics platform for single-cell multiome data. Integrates <strong>sc-RNA and sc-ATAC data</strong> to study transcriptomic and epigenetic profiles simultaneously. Features flexible clustering to identify rare cell populations, and supports cross-dataset comparison of up to three datasets for reproducibility. Accepted for presentation at <strong>AACR 2023</strong>.</p>
-            <div class="project-tags">
-              <span class="tag tag-coral">Multiomics</span>
-              <span class="tag tag-coral">Reproducible pipeline</span>
-              <span class="tag tag-navy">HPC-slurm</span>
-              <span class="tag tag-muted">Docker Deployment</span>
-              <span class="tag tag-muted">Research</span>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="projects/project-iscvam.html" class="link-btn primary">View Project →</a>
-            <a href="https://github.com/AnnChenLab/ISCVAM" target="_blank" class="link-btn">GitHub ↗</a>
-            <div class="project-preview">
-              <img src="assets/img/iscvam-screenshot.png" alt="ISCVAM screenshot">
-            </div>
-          </div>
-        </div>
+     
 
         <!-- 05 — VAERS Association Rule Mining -->
         <div class="project-card" id="project-5">
